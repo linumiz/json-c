@@ -160,12 +160,14 @@ int json_object_to_file_ext(const char *filename, struct json_object *obj, int f
 		return -1;
 	}
 
+#if 0
 	if ((fd = open(filename, O_WRONLY | O_TRUNC | O_CREAT, 0644)) < 0)
 	{
 		_json_c_set_last_err("json_object_to_file: error opening file %s: %s\n", filename,
 		                     strerror(errno));
 		return -1;
 	}
+#endif
 	ret = _json_object_to_fd(fd, obj, flags, filename);
 	saved_errno = errno;
 	close(fd);

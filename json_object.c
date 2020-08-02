@@ -1804,5 +1804,5 @@ static void json_abort(const char *message)
 {
 	if (message != NULL)
 		fprintf(stderr, "json-c aborts with error: %s\n", message);
-	abort();
+	//abort();
 }

@@ -21,6 +21,8 @@ extern "C" {
 #endif
 
 struct json_object;
+#include <sys/types.h>
+#include "json.h"
 #include "json_inttypes.h"
 #include "json_types.h"
 
